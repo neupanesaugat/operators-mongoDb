@@ -19,4 +19,8 @@ use("kec-crud");
 //? must provide concrete value
 //? find movies whose genre size is 3
 
-db.movies.find({ genres: { $size: 3 } }, { name: 1, _id: 0, genres: 1 });
+// db.movies.find({ genres: { $size: 3 } }, { name: 1, _id: 0, genres: 1 });
+
+db.scores.find({
+  points: { $elemMatch: { sub: "Social", point: { $gt: 80 } } },
+});
