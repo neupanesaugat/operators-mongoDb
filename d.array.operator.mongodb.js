@@ -21,6 +21,12 @@ use("kec-crud");
 
 // db.movies.find({ genres: { $size: 3 } }, { name: 1, _id: 0, genres: 1 });
 
-db.scores.find({
-  points: { $elemMatch: { sub: "Social", point: { $gt: 80 } } },
-});
+//* $elemMatch : if you we need to satisfy all the conditions (not only one) inside any objects or arrays
+
+// db.scores.find({
+//   points: { $elemMatch: { sub: "Social", point: { $gt: 80 } } },
+// });
+
+//? find the students whose scores is greater than 80 and less than 85
+
+// db.scores.find({ scores: { $elemMatch: { $lt: 85, $gt: 80 } } });
