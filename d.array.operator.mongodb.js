@@ -21,7 +21,7 @@ use("kec-crud");
 
 // db.movies.find({ genres: { $size: 3 } }, { name: 1, _id: 0, genres: 1 });
 
-//* $elemMatch : if you we need to satisfy all the conditions (not only one) inside any objects or arrays
+//* $elemMatch : at least one value in array that satisfies all the given conditions
 
 // db.scores.find({
 //   points: { $elemMatch: { sub: "Social", point: { $gt: 80 } } },
